@@ -67,7 +67,9 @@ async def mostrar_detalles(update: Update, context: ContextTypes.DEFAULT_TYPE):
         await query.message.reply_text(mensaje, parse_mode="HTML")
 
 # Configura el bot
-TOKEN = "8202668609:AAF3i4qVMYrtc30h9wHf1WEuoFQVNgjVeLs"
+import os
+
+TOKEN = os.getenv("BOT_TOKEN")
 
 if __name__ == "__main__":
     app = ApplicationBuilder().token(TOKEN).build()
